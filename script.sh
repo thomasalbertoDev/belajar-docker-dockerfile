@@ -17,11 +17,22 @@ docker container start command
 docker container logs command
 
 # 4. Fungsi ini digunakan untuk melakukan build image dari Dockerfile yang ada di folder 4.command (LABEL INSTRUCTION)
-
 docker build -t xriot45/label 4.label
 
 # Perintah ini digunakan untuk melihat metadata dari image xriot45/label
 docker image inspect xriot45/label
+
+# 5. Fungsi ini digunakan untuk melakukan build image dari Dockerfile yang ada di folder 5.add (ADD INSTRUCTION)
+docker build -t xriot45/add 5.add
+
+# Perintah ini digunakan untuk membuat container dari image xriot45/add
+docker container create --name command xriot45/add
+
+# Perintah ini digunakan untuk menjalankan container yang telah dibuat sebelumnya
+docker container start add
+
+# Perintah ini digunakan untuk melihat log dari container yang telah dijalankan
+docker container logs add
 
 # Fungsi ini digunakan untuk menampilkan semua image yang ada
 docker image ls
