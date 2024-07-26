@@ -46,5 +46,17 @@ docker container start copy
 # Perintah ini digunakan untuk melihat log dari container yang telah dijalankan
 docker container logs copy
 
+# 7. Fungsi ini digunakan untuk melakukan build image dari Dockerfile yang ada di folder 7.ignore (IGNORE INSTRUCTION)
+docker build -t xriot45/ignore 7.ignore
+
+# Perintah ini digunakan untuk membuat container dari image xriot45/ignore
+docker container create --name ignore xriot45/ignore
+
+# Perintah ini digunakan untuk menjalankan container yang telah dibuat sebelumnya
+docker container start ignore
+
+# Perintah ini digunakan untuk melihat log dari container yang telah dijalankan
+docker container logs ignore
+
 # Fungsi ini digunakan untuk menampilkan semua image yang ada
 docker image ls
