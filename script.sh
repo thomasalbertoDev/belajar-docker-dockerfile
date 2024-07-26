@@ -58,5 +58,20 @@ docker container start ignore
 # Perintah ini digunakan untuk melihat log dari container yang telah dijalankan
 docker container logs ignore
 
+# 8. Fungsi ini digunakan untuk melakukan build image dari Dockerfile yang ada di folder 8.expose (EXPOSE INSTRUCTION)
+docker build -t xriot45/expose 8.expose
+
+# Perintah ini digunakan untuk membuat container dari image xriot45/expose
+docker container create --name expose -p 8080:8080 xriot45/expose
+
+# Perintah ini digunakan untuk menjalankan container yang telah dibuat sebelumnya
+docker container start expose
+
+# Perintah ini digunakan untuk menginspeksi / melihat metadata dari image xriot45/expose
+docker image inspect xriot45/expose
+
+# Perintah ini digunakan untuk melihat log dari container yang telah dijalankan
+docker container logs expose
+
 # Fungsi ini digunakan untuk menampilkan semua image yang ada
 docker image ls
