@@ -73,5 +73,8 @@ docker image inspect xriot45/expose
 # Perintah ini digunakan untuk melihat log dari container yang telah dijalankan
 docker container logs expose
 
+# Perintah ini digunakan untuk mengecek apakah container expose sudah berjalan atau belum
+curl http://localhost:8080
+
 # Fungsi ini digunakan untuk menampilkan semua image yang ada
 docker image ls
