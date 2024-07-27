@@ -137,3 +137,6 @@ docker image ls
 docker container create --name multi -p 8080:8080 xriot45/multi
 
 docker container start multi
+
+# Perintah ini digunakan untuk mengpush image xriot45/multi ke docker hub
+docker push xriot45/multi
