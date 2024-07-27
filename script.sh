@@ -81,3 +81,12 @@ docker container start volume
 docker container logs volume
 
 docker container inspect volume
+
+# 11. Fungsi ini digunakan untuk melakukan build image dari Dockerfile yang ada di folder 11.workdir (WORKDI INSTRUCTION)
+docker build -t xriot45/workdir 11.workdir
+
+docker container create --name workdir -p 8080:8080 xriot45/workdir
+
+docker container start workdir
+
+docker container exec -i -t workdir /bin/sh
