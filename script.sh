@@ -76,5 +76,21 @@ docker container logs expose
 # Perintah ini digunakan untuk mengecek apakah container expose sudah berjalan atau belum
 curl http://localhost:8080
 
+# 9. Fungsi ini digunakan untuk melakukan build image dari Dockerfile yang ada di folder 9.env (ENV INSTRUCTION)
+
+docker build -t xriot45/env 9.env
+
+# Perintah ini digunakan untuk menginspeksi / melihat metadata dari image xriot45/env
+docker image inspect xriot45/env
+
+# Perintah ini digunakan untuk membuat container dari image xriot45/env
+docker container create --name env --env APP_PORT=9090 -p 9090:9090 xriot45/env
+
+# Perintah ini digunakan untuk menjalankan container yang telah dibuat sebelumnya
+docker container start env
+
+# Perintah ini digunakan untuk melihat log dari container yang telah dijalankan
+docker container logs env
+
 # Fungsi ini digunakan untuk menampilkan semua image yang ada
 docker image ls
