@@ -82,7 +82,7 @@ docker container logs volume
 
 docker container inspect volume
 
-# 11. Fungsi ini digunakan untuk melakukan build image dari Dockerfile yang ada di folder 11.workdir (WORKDI INSTRUCTION)
+# 11. Fungsi ini digunakan untuk melakukan build image dari Dockerfile yang ada di folder 11.workdir (WORKDIR INSTRUCTION)
 docker build -t xriot45/workdir 11.workdir
 
 docker container create --name workdir -p 8080:8080 xriot45/workdir
@@ -90,3 +90,12 @@ docker container create --name workdir -p 8080:8080 xriot45/workdir
 docker container start workdir
 
 docker container exec -i -t workdir /bin/sh
+
+# 12. Fungsi ini digunakan untuk melakukan build image dari Dockerfile yang ada di folder 12.user (USER INSTRUCTION)
+docker build -t xriot45/user 12.user
+
+docker container create --name user -p 8080:8080 xriot45/user
+
+docker container start user
+
+docker container exec -i -t user /bin/sh
