@@ -108,3 +108,12 @@ docker container create --name arg -p 8080:8080 xriot45/arg
 docker container start arg
 
 docker container exec -i -t arg /bin/sh
+
+# 14. Fungsi ini digunakan untuk melakukan build image dari Dockerfile yang ada di folder 14.health (HEALTH INSTRUCTION)
+docker build -t xriot45/health 14.health
+
+docker container create --name health -p 8080:8080 xriot45/health
+
+docker container start health
+
+docker container ls
