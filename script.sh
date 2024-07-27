@@ -99,3 +99,12 @@ docker container create --name user -p 8080:8080 xriot45/user
 docker container start user
 
 docker container exec -i -t user /bin/sh
+
+# 13. Fungsi ini digunakan untuk melakukan build image dari Dockerfile yang ada di folder 13.arg (ARG INSTRUCTION)
+docker build -t xriot45/arg 13.arg --build-arg app=hello
+
+docker container create --name arg -p 8080:8080 xriot45/arg
+
+docker container start arg
+
+docker container exec -i -t arg /bin/sh
