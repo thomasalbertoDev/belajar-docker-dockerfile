@@ -128,3 +128,12 @@ docker container start entrypoint
 docker image inspect xriot45/entrypoint
 
 docker container ls
+
+# 16. Fungsi ini digunakan untuk melakukan build image dari Dockerfile yang ada di folder 16.multi (MULTI INSTRUCTION)
+docker build -t xriot45/multi 16.multi
+
+docker image ls
+
+docker container create --name multi -p 8080:8080 xriot45/multi
+
+docker container start multi
