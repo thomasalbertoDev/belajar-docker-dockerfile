@@ -117,3 +117,14 @@ docker container create --name health -p 8080:8080 xriot45/health
 docker container start health
 
 docker container ls
+
+# 15. Fungsi ini digunakan untuk melakukan build image dari Dockerfile yang ada di folder 15.entrypoint (ENTRYPOINT INSTRUCTION)
+docker build -t xriot45/entrypoint 15.entrypoint
+
+docker container create --name entrypoint -p 8080:8080 xriot45/entrypoint
+
+docker container start entrypoint
+
+docker image inspect xriot45/entrypoint
+
+docker container ls
